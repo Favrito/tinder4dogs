@@ -128,6 +128,7 @@ Project memory keeps persistent guidance (steering, specs notes, component docs)
   - `--review off` skips task-local review; use it intentionally and keep `/kiro-validate-impl {feature}` as the final quality gate
   - `/kiro-validate-impl {feature}` (standalone re-validation)
 - Progress check: `/kiro-spec-status {feature}` (use anytime)
+- When an implementation task is complete, close the corresponding GitHub issue.
 
 ## Skills Structure
 Skills are located in `.opencode/skills/kiro-*/SKILL.md`
