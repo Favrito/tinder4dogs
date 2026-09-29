@@ -32,10 +32,8 @@ CREATE TABLE dog_match (
     CONSTRAINT uk_dog_match_pair UNIQUE (low_dog_id, high_dog_id)
 );
 
-CREATE INDEX ix_dog_match_low_dog ON dog_match (low_dog_id);
-CREATE INDEX ix_dog_match_high_dog ON dog_match (high_dog_id);
-CREATE INDEX ix_dog_match_created_at ON dog_match (created_at DESC);
---rollback DROP INDEX ix_dog_match_created_at;
---rollback DROP INDEX ix_dog_match_high_dog;
---rollback DROP INDEX ix_dog_match_low_dog;
+CREATE INDEX ix_dog_match_low_created_at ON dog_match (low_dog_id, created_at DESC);
+CREATE INDEX ix_dog_match_high_created_at ON dog_match (high_dog_id, created_at DESC);
+--rollback DROP INDEX ix_dog_match_high_created_at;
+--rollback DROP INDEX ix_dog_match_low_created_at;
 --rollback DROP TABLE dog_match;

@@ -5,7 +5,7 @@
   - Create `005-create-matching.sql` with changesets `tinder4dogs:005-create-dog-decision` and `tinder4dogs:006-create-dog-match`.
   - Define named primary-key, foreign-key, and uniqueness constraints, cascades, canonical low/high dog columns, UTC `created_at`, and lookup indexes.
   - Add explicit rollback directives and append the include to the master changelog without changing existing entries.
-  - Done when: the migrated database contains both tables and the application can validate the schema at startup.
+  - Done when: the migrated database contains both tables; once tasks 2.1 and 2.2 add the mappings, the application validates those mappings against the schema at startup.
   - _Boundary: Liquibase schema_
   - _Requirements: 1.3, 2.5, 3.4, 3.7, 6.1_
 
